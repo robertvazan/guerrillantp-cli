@@ -5,15 +5,22 @@
 
 [![Build status](https://github.com/robertvazan/guerrillantp-cli/workflows/build/badge.svg)](https://github.com/robertvazan/guerrillantp-cli/actions/workflows/build.yml)
 
-Command-line interface to GuerrillaNtp SNTP client.
+GuerrillaNtp CLI is a demo command-line SNTP client written in C# using [GuerrillaNtp library](https://guerrillantp.machinezoo.com/).
+It queries specified NTP servers and prints NTP time details.
+
+More on [homepage](https://guerrillantp.machinezoo.com/cli).
 
 ## Status
 
 Stable and maintained.
 
+## Getting started
+
+See [homepage](https://guerrillantp.machinezoo.com/cli).
+
 ## Documentation
 
-None yet. Review source code.
+* [Homepage](https://guerrillantp.machinezoo.com/cli)
 
 ## Feedback
 

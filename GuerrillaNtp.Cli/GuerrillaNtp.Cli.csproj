@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <Authors>robertvazan</Authors>
     <RepositoryUrl>https://github.com/robertvazan/guerrillantp-cli</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/robertvazan/guerrillantp-cli</PackageProjectUrl>
+    <PackageProjectUrl>https://guerrillantp.machinezoo.com/cli</PackageProjectUrl>
     <Description>Command-line interface to GuerrillaNtp SNTP client.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <IsPackable>false</IsPackable>

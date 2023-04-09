@@ -11,7 +11,6 @@ class Project(scaffold.Net):
     def nuget_description(self): return 'Command-line interface to GuerrillaNtp SNTP client.'
     def inception_year(self): return 2014
     def project_status(self): return self.stable_status()
-    def has_website(self): return False
 
     def dependencies(self):
         yield from super().dependencies()
