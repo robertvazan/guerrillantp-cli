@@ -16,4 +16,8 @@ class Project(scaffold.Net):
         yield from super().dependencies()
         yield self.use('GuerrillaNtp:3.1.0')
 
+    def documentation_links(self):
+        yield from super().documentation_links()
+        yield 'GuerrillaNtp library', 'https://guerrillantp.machinezoo.com/'
+
 Project().generate()

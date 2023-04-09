@@ -21,6 +21,7 @@ See [homepage](https://guerrillantp.machinezoo.com/cli).
 ## Documentation
 
 * [Homepage](https://guerrillantp.machinezoo.com/cli)
+* [GuerrillaNtp library](https://guerrillantp.machinezoo.com/)
 
 ## Feedback
 
