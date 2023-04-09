@@ -1,17 +1,20 @@
 # This script generates and updates project configuration files.
 
-# We are assuming that project-config is available in sibling directory.
-# Checkout from https://github.com/robertvazan/project-config
-import pathlib
-project_directory = lambda: pathlib.Path(__file__).parent.parent
-config_directory = lambda: project_directory().parent/'project-config'
-exec((config_directory()/'src'/'net.py').read_text())
+# Run this script with rvscaffold in PYTHONPATH
+import rvscaffold as scaffold
 
-root_namespace = lambda: 'GuerrillaNtp'
-inception_year = lambda: 2014
-nuget_description = lambda: 'Simple NTP (SNTP) client that can be embedded in desktop applications to provide accurate network time even when the system clock is unsynchronized.'
-nuget_tags = lambda: 'NTP; SNTP; time; clock; network'
-extra_sln_projects = lambda: ['GuerrillaNtp.Cli']
+class Project(scaffold.Net):
+    def script_path_text(self): return __file__
+    def repository_name(self): return 'guerrillantp-cli'
+    def root_namespace(self): return 'GuerrillaNtp.Cli'
+    def pretty_name(self): return 'GuerrillaNtp CLI'
+    def nuget_description(self): return 'Command-line interface to GuerrillaNtp SNTP client.'
+    def inception_year(self): return 2014
+    def project_status(self): return self.stable_status()
+    def has_website(self): return False
 
-generate()
+    def dependencies(self):
+        yield from super().dependencies()
+        yield self.use('GuerrillaNtp:3.1.0')
 
+Project().generate()
