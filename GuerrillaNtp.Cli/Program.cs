@@ -8,9 +8,13 @@ namespace GuerrillaNtp.Cli
     {
         public static async Task Main(string[] args)
         {
+            Console.WriteLine("GuerrillaNtp CLI {0} using GuerrillaNtp library {1}",
+                typeof(Program).Assembly.GetName().Version.ToString(3),
+                typeof(NtpClient).Assembly.GetName().Version.ToString(3));
             var servers = args.Length > 0 ? args : new[] { "pool.ntp.org" };
             foreach (var host in servers)
             {
+                Console.WriteLine("");
                 Console.WriteLine("Querying {0}...", host);
                 try
                 {
@@ -37,11 +41,9 @@ namespace GuerrillaNtp.Cli
                     Console.WriteLine("Root dispersion:    {0}ms", response.RootDispersion.TotalMilliseconds);
                     Console.WriteLine("Poll interval:      2^{0}s", response.PollInterval);
                     Console.WriteLine("Precision:          2^{0}s", response.Precision);
-                    Console.WriteLine();
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine();
                     Console.WriteLine("NTP query failed: {0}", ex.Message);
                 }
             }
